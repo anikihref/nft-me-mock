@@ -1,0 +1,5 @@
+// file for mixins
+
+@function rem($size) {
+  @return $size / $pageFontSize * 1rem;
+}
