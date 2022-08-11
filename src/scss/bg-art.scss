@@ -1,0 +1,129 @@
+.view-art-works {
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border: 1px solid #fff;
+    background-color: rgba(255, 255, 255, .2);
+    &__inner {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border: 1px solid #fff;
+        width: 50%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+  
+    &__angle {
+        width: 15px;
+        height: 15px;
+        border-right: 4px solid $pink;
+        border-top: 4px solid $pink;
+    }
+  }
+
+  .letter {
+    line-height: 20px;
+    font-size: 14px;
+    position: absolute;
+  }
+  .letter1 {
+    left: calc(71 / 150) * 100%;
+    top: calc(8 / 150) * 100%;
+  }
+  .letter2 {
+    left: calc(81 / 150) * 100%;
+    top: calc(8 / 150) * 100%;
+  }
+  .letter3 {
+    left: calc(87 / 150) * 100%;
+    top: calc(11 / 150) * 100%;
+  }
+  .letter4 {
+    left: calc(98 / 150) * 100%;
+    top: calc(17 / 150) * 100%;
+  }
+  .letter5 {
+    left: calc(115 / 150) * 100%;
+    top: calc(36 / 150) * 100%;
+  }
+  .letter6 {
+    left: calc(120 / 150) * 100%;
+    top: calc(45 / 150) * 100%;
+  }
+  .letter7 {
+    left: calc(122 / 150) * 100%;
+    top: calc(55 / 150) * 100%;
+  }
+  .letter8 {
+    left: calc(120 / 150) * 100%;
+    top: calc(81 / 150) * 100%;
+  }
+  .letter9 {
+    left: calc(115 / 150) * 100%;
+    top: calc(94 / 150) * 100%;
+  }
+  .letter10 {
+    left: calc(110 / 150) * 100%;
+    top: calc(102 / 150) * 100%;
+  }
+  .letter11 {
+    left: calc(103 / 150) * 100%;
+    top: calc(109 / 150) * 100%;
+  }
+  .letter12 {
+    left: calc(88 / 150) * 100%;
+    top: calc(119 / 150) * 100%;
+  }
+  .letter13 {
+    left: calc(71 / 150) * 100%;
+    top: calc(123 / 150) * 100%;
+  }
+  .letter14 {
+    left: calc(61 / 150) * 100%;
+    top: calc(122 / 150) * 100%;
+  }
+  .letter15 {
+    left: calc(48 / 150) * 100%;
+    top: calc(119 / 150) * 100%;
+  }
+  .letter16 {
+    left: calc(32 / 150) * 100%;
+    top: calc(112 / 150) * 100%;
+  }
+  .letter17 {
+    left: calc(15 / 150) * 100%;
+    top: calc(93 / 150) * 100%;
+  }
+  .letter18 {
+    left: calc(11 / 150) * 100%;
+    top: calc(84 / 150) * 100%;
+  }
+  .letter19 {
+    left: calc(9 / 150) * 100%;
+    top: calc(74 / 150) * 100%;
+  }
+  .letter20 {
+    left: calc(10 / 150) * 100%;
+    top: calc(48 / 150) * 100%;
+  }
+  .letter21 {
+    left: calc(15 / 150) * 100%;
+    top: calc(36 / 150) * 100%;
+  }
+  .letter22 {
+    left: calc(22 / 150) * 100%;
+    top: calc(28 / 150) * 100%;
+  }
+  .letter23 {
+    left: calc(29 / 150) * 100%;
+    top: calc(21 / 150) * 100%;
+  }
+  .letter24 {
+    left: calc(49 / 150) * 100%;
+    top: calc(11 / 150) * 100%;
+  }

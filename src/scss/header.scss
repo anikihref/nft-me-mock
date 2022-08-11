@@ -1,0 +1,141 @@
+.header {
+    background-color: $black;
+    position: relative;
+
+
+    &__content {
+        margin-top: 120px;
+    }
+
+    &__container {
+        position: relative;
+        z-index: 100;
+    }
+
+    &__title {
+        font-size: rem(84px);
+        line-height: 119%;
+        width: 660px;
+        letter-spacing: 1px;
+    }
+
+    &__text {
+        margin-top: 22px;
+        color: $contentText;
+        font-size: rem(20px);
+        line-height: 160%;
+        width: 640px;
+    }
+
+    &__watch-btn {
+        margin-top: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $gray;
+        max-height: 120px;
+        padding: 44px 0 34px 0;
+        width: 52%;
+        max-height: 120px;
+    }
+
+    &__btn-text {
+        font-family: $titleFont;
+        font-size: rem(32px);
+        margin-right: 12px;
+        line-height: 138%;
+    }
+
+    &__btn-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 42px;
+        height: 42px;
+        background-color: #fff;
+        & img {
+            width: 12px;
+        }
+    }
+
+    &__bg-img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 54vw;
+        max-width: 800px;
+        z-index: 10;
+        & img {
+            width: 100%;
+        }
+    }
+
+    &__bg-element1 {
+        position: absolute;
+        width: 21%;
+        max-width: 160px;
+        left: 0;
+        top: 50%;
+        aspect-ratio: 1 / 1;
+        background-color: #000;
+        z-index: 15;
+        
+    }
+
+    &__bg-element2 {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 50%;
+        width: 21%;
+        max-width: 160px;
+        background-color: $black;
+        z-index: 12;
+    }
+
+    &__bg-art {
+        position: absolute;
+        width: calc(160 / 792) * 100%;
+        bottom: calc(60 / 688) * 100%;
+        left: calc(130/ 792) * 100%;
+    }
+}
+
+
+.navbar {
+        min-height: 60px;
+        z-index: 20;
+        position: absolute;
+        width: 100%;
+        &__container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+		&__logo {
+            width: 60px;
+            & img {
+                width: 100%;
+            }
+		}
+
+		&__nav {
+            margin-left: 50px;
+            display: flex;
+            gap: 36px;
+            flex-grow: 1;
+		}
+
+		&__navlink {
+		}
+
+		&__button {
+            font-size: rem(18px);
+            line-height: 111%;
+            background-color: $pink;
+            font-family: $titleFont;
+            padding: 7px 38px;
+		}
+}
+

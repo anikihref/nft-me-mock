@@ -1,4 +1,43 @@
 <header class="header">
-	
-	header
+	<div class="header-navbar navbar">
+		<div class="container navbar__container">
+			<a href="#" class="navbar__logo"  href="#">
+				<img src="@img/logo.png" alt="logo">
+			</a>
+
+			<nav class="navbar__nav">
+				<a href="#" class="navbar__navlink">Marketplace</a>
+				<a href="#" class="navbar__navlink">Artists</a>
+				<a href="#" class="navbar__navlink">Contact</a>
+			</nav>
+
+			<button class="navbar__button">
+				Buy Template
+			</button>
+		</div>
+	</div>
+
+	<div class="header__content">
+		<div class="container header__container">
+			<h1 class="header__title">Discover rare digital art and collect NFT’s</h1>
+			<div class="header__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum.</div>
+
+		</div>
+
+		<button class="header__watch-btn">
+			<p class="header__btn-text">Watch video</p>
+			<div class="header__btn-icon">
+				<img src="@img/icon/play.svg" alt="play">
+			</div>
+		</button>
+	</div>
+
+	<div class="header__bg-img">
+		<img src="@img/content/header.jpg" alt="bg">
+		<div class="header__bg-element1"></div>
+		<div class="header__bg-element2"></div>
+		<div class="header__bg-art">
+			@@include('./bg-art.html', {})
+		</div>
+	</div>
 </header>
