@@ -1,7 +1,13 @@
 @import 'default/vars';
 @import 'default/mixins';
 @import 'default/nullstyle';
-// @import 'default/fonts'; after fonts.scss will be created
+@import 'default/fonts';
+@import 'bg-art';
+@import 'header';
+@import 'footer';
+
+@import 'statistics';
+
 
 .container {
   max-width: $containerWidth - 20px;
@@ -19,3 +25,4 @@
 .main {
   flex: 1 1 auto;
 }
+

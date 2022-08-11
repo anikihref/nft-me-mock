@@ -1,0 +1,39 @@
+.statistics {
+    background-color: $gray;
+    max-height: 490px;
+    padding: 165px 0;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__text {
+        max-width: 450px;
+        width: calc(450px / $containerWidth) * 100%;
+        font-size: rem(20px);
+        line-height: 160%;
+        color: $contentText;
+    }
+
+    &__main {
+        display: flex;
+        gap: 75px;
+
+    }
+
+    &__category {
+        text-align: center;
+    }
+
+    &__number {
+        font-size: rem(56px);
+        letter-spacing: 1px;
+    }
+
+    &__name {
+        margin-top: 10px;
+        line-height: 125%;
+    }
+}
+
