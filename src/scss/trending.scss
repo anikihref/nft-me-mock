@@ -1,0 +1,125 @@
+.trending {
+    margin-bottom: 140px;
+    &__container {
+        display: grid;
+        row-gap: 95px;
+        column-gap: 85px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+   
+
+    &__title {
+        margin-bottom: 18px;
+        font-size: rem(56px);
+        line-height: 123%;
+    }
+
+    &__text {
+        font-size: rem(20px);
+        line-height: 160%;
+        color: $contentText;
+    }
+
+    
+
+    &__item-title {
+        font-family: $titleFont;
+        font-size: rem(31px);
+        line-height: 142%;
+    }
+
+    &__item-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 7px;
+        margin-bottom: 12px;
+    }
+
+    &__item-text {
+        color: #c4c4c4;
+        line-height: 125%;
+    }
+
+    &__item-price {
+        line-height: 125%;
+        color: $pink;
+    }
+
+    &__item-image {
+        
+        position: relative;
+
+        & img {
+            width: 100%;
+            height: 100%;
+        }
+
+        
+    }
+
+    &__item-image-bg {
+        position: absolute;
+        width: 32%;
+        right: calc(40 / 555) * 100%;
+        bottom:  calc(40 / 450) * 100%;
+    }
+
+    &__header-item {
+        grid-row-start: 1;
+        grid-row-end: 4;
+    }
+
+    &__item1 {
+        grid-row-start: 2;
+        grid-row-end: 9;
+    }
+
+    &__item2 {
+        grid-row-start: 4;
+        grid-row-end: 11;
+    }
+
+    &__item3 {
+        grid-row-start: 9;
+        grid-row-end: 16;
+    }
+
+    &__item4 {
+        grid-row-start: 11;
+        grid-row-end: 18;
+    }
+
+    &__item5 {
+        grid-row-start: 16;
+        grid-row-end: 23;
+    }
+
+    &__item6 {
+        grid-row-start: 18;
+        grid-row-end: 25;
+    }
+
+    &__button-item {
+        grid-row-start: 23;
+        grid-row-end: 25;
+        margin-left: auto;
+        width: fit-content;
+    }
+
+    &__button {
+        background-color: transparent;
+        color: $pink;
+        font-size: rem(18px);
+        font-family: $titleFont;
+        line-height: 110%;
+
+    }
+
+    &__button-style-elem {
+        @extend %angle;
+        margin-bottom: 10px;
+    }
+}
+

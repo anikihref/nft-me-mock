@@ -19,10 +19,8 @@
     }
   
     &__angle {
-        width: 15px;
-        height: 15px;
-        border-right: 4px solid $pink;
-        border-top: 4px solid $pink;
+      @extend %angle;
+      
     }
   }
 

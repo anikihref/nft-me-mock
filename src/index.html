@@ -1,73 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
+  @@include('html/head.html', { "title":"NFT Me" })
+  <body>
+    <div class="wrapper">
+      @@include('html/header.html', {})
 
-@@include('html/head.html', {
-	"title":"NFT Me"
-})
-<body>
-	<div class="wrapper">
-		@@include('html/header.html', {})
+      <main class="main">
+        <div class="statistics">
+          <div class="statistics__container container">
+            <div class="statistics__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse varius enim in eros elementum tristique. Duis cursus,
+              mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
+              libero vitae erat.
+            </div>
+            <div class="statistics__main">
+              <div class="statistics__category">
+                <div class="statistics__number">17K</div>
+                <div class="statistics__name">Artwork</div>
+              </div>
 
-		<main class="main">
-			<div class="statistics">
-				<div class="statistics__container container">
-					<div class="statistics__text">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
-					</div>
-					<div class="statistics__main">
-						<div class="statistics__category">
-							<div class="statistics__number">17K</div>
-							<div class="statistics__name">Artwork</div>
-						</div>
+              <div class="statistics__category">
+                <div class="statistics__number">4.5K</div>
+                <div class="statistics__name">Auctions</div>
+              </div>
 
-						<div class="statistics__category">
-							<div class="statistics__number">4.5K</div>
-							<div class="statistics__name">Auctions</div>
-						</div>
+              <div class="statistics__category">
+                <div class="statistics__number">23</div>
+                <div class="statistics__name">Artists</div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-						<div class="statistics__category">
-							<div class="statistics__number">23</div>
-							<div class="statistics__name">Artists</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			
-			<div class="samples">
-				<div class="samples__container">
-					<div class="samples__item"><img src="@img/content/main/main_0.png" alt="sample"></div>
-					<div class="samples__item"><img src="@img/content/main/main_1.png" alt="sample"></div>
-					<div class="samples__item"><img src="@img/content/main/main_2.png" alt="sample"></div>
-					<div class="samples__item"><img src="@img/content/main/main_3.png" alt="sample"></div>
-					<div class="samples__item"><img src="@img/content/main/main_4.png" alt="sample"></div>
-					<div class="samples__item"><img src="@img/content/main/main_5.png" alt="sample"></div>
-				</div>
-			</div>
-			
-			<div class="nft-steps">
+        <div class="samples">
+          <div class="samples__container">
+            <div class="samples__item">
+              <img src="@img/content/main/main_0.png" alt="sample" />
+            </div>
+            <div class="samples__item">
+              <img src="@img/content/main/main_1.png" alt="sample" />
+            </div>
+            <div class="samples__item">
+              <img src="@img/content/main/main_2.png" alt="sample" />
+            </div>
+            <div class="samples__item">
+              <img src="@img/content/main/main_3.png" alt="sample" />
+            </div>
+            <div class="samples__item">
+              <img src="@img/content/main/main_4.png" alt="sample" />
+            </div>
+            <div class="samples__item">
+              <img src="@img/content/main/main_5.png" alt="sample" />
+            </div>
+          </div>
+        </div>
 
-			</div>
+        <div class="nft-steps">
+          <div class="nft-steps__container container">
+            <h2 class="nft-steps__title">Create and sell NFTs</h2>
+            <div class="nft-steps__main">
+              <div class="nft-steps__item">
+                <div class="nft-steps__item-circle"></div>
+                <h4 class="nft-steps__item-title">Connect your wallet</h4>
+                <div class="nft-steps__item-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                </div>
+                <div class="nft-steps__item-line"></div>
+              </div>
 
-			<div class="trending">
+              <div class="nft-steps__item">
+                <div class="nft-steps__item-circle"></div>
+                <h4 class="nft-steps__item-title">Explore our marketplace</h4>
+                <div class="nft-steps__item-text">
+                  Lorem ipsum dolor sit amet, consectetur
+                </div>
+                <div class="nft-steps__item-line"></div>
+              </div>
 
-			</div>
+              <div class="nft-steps__item">
+                <div class="nft-steps__item-circle"></div>
+                <h4 class="nft-steps__item-title">Create your collection</h4>
+                <div class="nft-steps__item-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing
+                </div>
+                <div class="nft-steps__item-line"></div>
+              </div>
 
-			<div class="artists">
+			  
+            </div>
+          </div>
+        </div>
 
-			</div>
+        <div class="trending">
+          <div class="trending__container container">
+            <div class="trending__header-item">
+              <h2 class="trending__title">Trending this week</h2>
+              <div class="trending__text">Lorem ipsum dolor sit amet, consectetur dolore adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+            </div>
 
-			<div class="backed">
-				
-			</div>
+            <div class="trending__item trending__item1">
+              <h5 class="trending__item-title">Jason Riley</h5>
+              <div class="trending__item-info">
+                <div class="trending__item-text">Miricale Culture</div>
+                <div class="trending__item-price">3.24 eth</div>
+              </div>
+              <div class="trending__item-image">
+                <img src="@img/content/trending/trending_0.jpg" alt="trending picture">
+                <div class="trending__item-image-bg">
+                  @@include('./html/bg-art.html', {})
 
-			<div class="input-section">
+                </div>
+              </div>
+            </div>
 
-			</div>
-		</main>
+            <div class="trending__item trending__item2">
+              <h5 class="trending__item-title">Mandy Ross</h5>
+              <div class="trending__item-info">
+                <div class="trending__item-text">Miricale Culture</div>
+                <div class="trending__item-price">3.24 eth</div>
+              </div>
+              <div class="trending__item-image">
+                <img src="@img/content/trending/trending_1.jpg" alt="trending picture">
+                <div class="trending__item-image-bg">
+                  @@include('./html/bg-art.html', {})
 
-		@@include('html/footer.html', {})
-	</div>
+                </div>
+              </div>
+            </div>
 
-	<script src="/script/app.min.js"></script>
-</body>
+            <div class="trending__item trending__item3">
+              <h5 class="trending__item-title">Lewis Lowie </h5>
+              <div class="trending__item-info">
+                <div class="trending__item-text">Miricale Culture</div>
+                <div class="trending__item-price">3.24 eth</div>
+              </div>
+              <div class="trending__item-image">
+                <img src="@img/content/trending/trending_2.jpg" alt="trending picture">
+                <div class="trending__item-image-bg">
+                  @@include('./html/bg-art.html', {})
+
+                </div>
+              </div>
+            </div>
+
+            <div class="trending__item trending__item4">
+              <h5 class="trending__item-title">Dan Gatty</h5>
+              <div class="trending__item-info">
+                <div class="trending__item-text">Miricale Culture</div>
+                <div class="trending__item-price">3.24 eth</div>
+              </div>
+              <div class="trending__item-image">
+                <img src="@img/content/trending/trending_3.jpg" alt="trending picture">
+                <div class="trending__item-image-bg">
+                  @@include('./html/bg-art.html', {})
+
+                </div>
+              </div>
+            </div>
+
+            <div class="trending__item trending__item5">
+              <h5 class="trending__item-title">Mandy Ross</h5>
+              <div class="trending__item-info">
+                <div class="trending__item-text">Miricale Culture</div>
+                <div class="trending__item-price">3.24 eth</div>
+              </div>
+              <div class="trending__item-image">
+                <img src="@img/content/trending/trending_4.jpg" alt="trending picture">
+                <div class="trending__item-image-bg">
+                  @@include('./html/bg-art.html', {})
+
+                </div>
+              </div>
+            </div>
+
+            <div class="trending__item trending__item6">
+              <h5 class="trending__item-title">Mandy Ross</h5>
+              <div class="trending__item-info">
+                <div class="trending__item-text">Miricale Culture</div>
+                <div class="trending__item-price">3.24 eth</div>
+              </div>
+              <div class="trending__item-image">
+                <img src="@img/content/trending/trending_5.jpg" alt="trending picture">
+                <div class="trending__item-image-bg">
+                  @@include('./html/bg-art.html', {})
+
+                </div>
+              </div>
+            </div>
+
+            <div class="trending__button-item">
+              <div class="trending__button-style-elem"></div>
+              <button class="trending__button">View marketplace</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="artists"></div>
+
+        <div class="backed"></div>
+
+        <div class="input-section"></div>
+      </main>
+
+      @@include('html/footer.html', {})
+    </div>
+
+    <script src="/script/app.min.js"></script>
+  </body>
 </html>

@@ -1,0 +1,64 @@
+.nft-steps {
+    margin-top: 175px;
+    margin-bottom: 185px;
+    &__container {
+        
+    }
+
+    &__title {
+        font-size: rem(52px);
+        line-height: 123%;
+        font-family: $titleFont;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    &__main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__item {
+        position: relative;
+        overflow: hidden;
+        max-height: 275px;
+        height: 275px;
+        width: 32%;
+        background-color: $gray;
+        border: 1px solid $lightGray;
+        padding: 45px 17px 60px;
+    }
+
+    &__item-circle {
+        width: 50px;
+        height: 50px;
+        background-color: #C4C4C4;
+        border-radius: 50%;
+        margin-bottom: 25px;
+    }
+
+    &__item-title {
+        margin-bottom: 11px;
+        font-size: $titleFont;
+        font-size: rem(23px);
+        line-height: 140%;
+    }
+
+    &__item-text {
+        line-height: 160%;
+        max-width: 305px;
+    }
+
+    &__item-line {
+        background-color: $lightGray;
+        width: 1px;
+        height: 50%;
+        position: absolute;
+        transform: rotate(-45deg);
+        right: 35px;
+        top: -20px;
+    }
+}
