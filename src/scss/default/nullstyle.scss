@@ -39,3 +39,20 @@ a {
 ul, ol {
   list-style: none;
 }
+
+.container {
+  max-width: $containerWidth - 20px;
+  padding: 0 10px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1 1 auto;
+}
