@@ -1,5 +1,6 @@
 .statistics {
     background-color: $gray;
+    overflow: hidden;
     max-height: 490px;
     padding: 165px 0;
     &__container {

@@ -125,3 +125,17 @@
     left: calc(49 / 150) * 100%;
     top: calc(11 / 150) * 100%;
   }
+
+
+@media (max-width: 1024px) {
+  .letter {
+    line-height: 16px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .view-art-works {
+    display: none;
+  }
+}

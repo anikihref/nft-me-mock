@@ -10,10 +10,19 @@
 				<a href="#" class="navbar__navlink">Artists</a>
 				<a href="#" class="navbar__navlink">Contact</a>
 			</nav>
+			
 
 			<button class="navbar__button">
 				Buy Template
 			</button>
+			
+			<button class="navbar__burger-btn">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+
+			
 		</div>
 	</div>
 
@@ -39,5 +48,20 @@
 		<div class="header__bg-art">
 			@@include('./bg-art.html', {})
 		</div>
+	</div>
+
+	<div class="navbar__burger burger">
+		<button class="burger__close-btn">
+			<img src="@img/icon/close.svg" alt="close">
+		</button>
+		<nav class="burger__nav">
+			<a href="#" class="burger__navlink">Marketplace</a>
+			<a href="#" class="burger__navlink">Artists</a>
+			<a href="#" class="burger__navlink">Contact</a>
+		</nav>
+
+		<button class="burger__button">
+			Buy Template
+		</button>
 	</div>
 </header>

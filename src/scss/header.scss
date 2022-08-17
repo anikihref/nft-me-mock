@@ -2,21 +2,24 @@
     background-color: $black;
     position: relative;
 
-
     &__content {
+        min-height: 600px;
         margin-top: 120px;
+        display: flex;
+        flex-direction: column;
     }
 
     &__container {
         position: relative;
-        z-index: 100;
+        z-index: 50;
+        flex-grow: 1;
+        width: 100%;
     }
 
     &__title {
         font-size: rem(84px);
         line-height: 119%;
         width: 660px;
-        letter-spacing: 1px;
     }
 
     &__text {
@@ -28,7 +31,7 @@
     }
 
     &__watch-btn {
-        margin-top: 90px;
+        margin-top: 20px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -122,12 +125,15 @@
 
 		&__nav {
             margin-left: 50px;
+            margin-right: 15px;
             display: flex;
             gap: 36px;
             flex-grow: 1;
 		}
 
 		&__navlink {
+            font-size: rem(18px);
+            line-height: 110%;
 		}
 
 		&__button {
@@ -137,5 +143,222 @@
             font-family: $titleFont;
             padding: 7px 38px;
 		}
+
+        &__burger-btn {
+            display: none;
+            margin-left: auto;
+            position: relative;
+            width: 35px;
+            height: 30px;
+            background-color: transparent;
+            z-index: 1000;
+            & span {
+                position: absolute;
+                height: 2px;
+                left: 0;
+                right: 0;
+                background-color: $pink;
+            }
+
+            & span:nth-child(1) {
+                top: 0%;
+            }
+
+            & span:nth-child(2) {
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            & span:nth-child(3) {
+                bottom: 0%;
+            }
+        }
 }
 
+
+.burger {
+    position: fixed;
+    width: 100vw; 
+    height: 100vw;
+    left: 100%;
+    top: 0;
+    background-color: $gray;
+    transition: 400ms ease-in;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    &.active {
+        left: 0%;
+    }
+
+    &__nav {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        flex-grow: 1;
+        width: 100%;
+    }
+
+    &__navlink {
+        font-size: rem(20px);
+    }
+
+    &__button {
+        background-color: $pink;
+        padding: 15px 0;
+        width: 300px;
+        font-family: $titleFont;
+        font-size: rem(24px);
+        line-height: 110%;
+    }
+
+    &__close-btn {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        & img {
+            fill: $pink !important;
+            width: 100%;
+            height: 100%;
+        }
+   }
+}
+
+@media (max-width: 1024px) {
+    .header {
+        &__title {
+            font-size: rem(56px);
+            max-width: 600px;
+            width: auto;
+        }
+
+        &__text {
+            width: auto;
+            font-size: rem(18px);
+            max-width: 500px;
+        }
+
+        &__content {
+            margin-top: 90px;
+            min-height: 450px;
+
+        }
+    }
+
+   
+}   
+
+@media (max-width: 768px) {
+    .header {
+        overflow: hidden;
+        &__content {
+            margin-top: 70px;
+            min-height: 300px;
+
+        }
+
+        &__title {
+            font-size: rem(32px);
+            margin-right: 0;
+        }
+
+        &__text {
+            margin-top: 15px;
+            font-size: rem(16px);
+        }
+
+        &__watch-btn {
+            // margin-top: 50px;
+            width: 100%;
+            padding: 25px 0;
+            z-index: 100;
+            position: relative;
+            
+        }
+    
+        &__btn-text {
+            font-size: rem(20px);
+            margin-right: 10px;
+        }
+    
+        &__btn-icon {
+            width: 30px;
+            height: 30px;
+            background-color: #fff;
+            & img {
+                width: 10px;
+            }
+        }
+
+        &__bg-element1,&__bg-element2  {
+           display: none;
+            
+        }
+
+    }
+
+    .navbar {
+        &__burger-btn {
+            display: block;
+        }
+
+        &__nav, &__button {
+            display: none;
+		}
+
+        &__navlink {
+            font-size: rem(16px);
+        }
+
+        &__nav {
+            gap: 25px;
+            margin-left: 30px;
+        }
+
+		&__logo {
+            width: 50px;
+		}
+    }
+}
+
+@media (max-width: 425px) {
+    .header {
+        &__title {
+            font-size: rem(24px);
+        }
+
+        &__text {
+            font-size: rem(12px);
+        }
+
+        &__content {
+            min-height: 200px;
+        }
+    }
+
+    .burger {
+        padding-top: 50px;
+        padding-bottom: 30px;
+        
+    
+        &__navlink {
+            font-size: rem(16px);
+        }
+    
+        &__button {
+            padding: 10px 0;
+            width: 250px;
+            font-size: rem(20px);
+        }
+    }
+}
