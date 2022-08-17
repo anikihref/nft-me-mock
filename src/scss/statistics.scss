@@ -1,7 +1,6 @@
 .statistics {
     background-color: $gray;
     overflow: hidden;
-    max-height: 490px;
     padding: 165px 0;
     &__container {
         display: flex;
@@ -29,7 +28,7 @@
 
     &__number {
         font-size: rem(56px);
-        letter-spacing: 1px;
+        font-family: $titleFont;
     }
 
     &__name {
@@ -38,3 +37,82 @@
     }
 }
 
+@media (max-width: 1024px) {
+    .statistics {
+        padding: 110px 0;
+        &__container {
+            flex-direction: column-reverse;
+        }
+    
+        &__text {
+            max-width: none;
+            text-align: center;
+            width: 60%;
+            font-size: rem(20px);
+        }
+    
+        &__main {
+            margin-bottom: 40px;
+        }
+    
+        &__number {
+            font-size: rem(50px);
+        }
+    }
+    
+    
+}
+
+@media (max-width: 768px) {
+    .statistics {
+        padding: 60px 0;
+    
+        &__text {
+            max-width: 500px;
+            width: 90%;
+            font-size: rem(14px);
+        }
+    
+        &__main {
+            gap: 40px;
+            margin-bottom: 25px;
+        }
+    
+        &__number {
+            font-size: rem(32px);
+        }
+    
+        &__name {
+            margin-top: 8px;
+            font-size: rem(14px);
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .statistics {
+        padding: 40px 0;
+        &__container {
+
+        }
+    
+        &__text {
+            max-width: 500px;
+            width: 90%;
+            font-size: rem(12px);
+        }
+    
+        &__main {
+            gap: 30px;
+            margin-bottom: 25px;
+        }
+    
+        &__number {
+            font-size: rem(24px);
+        }
+    
+        &__name {
+            font-size: rem(12px);
+        }
+    }
+}
