@@ -1,12 +1,11 @@
 .samples {
     background-color: $gray;
     overflow: hidden;
-    max-height: 1060px;
+    padding-top: 25px;
+    padding-bottom: 175px;
     display: flex;
     justify-content: center;
     &__container {
-        padding-top: 25px;
-        padding-bottom: 175px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 65px;
@@ -15,6 +14,7 @@
     &__item {
         max-height: 400px;
         max-width: 470px;
+        aspect-ratio: 7/6;
         &:nth-child(1n + 4) {
             transform: translateX(25px);
         }
@@ -27,6 +27,38 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .samples {
+        &__container {
+            gap: 50px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .samples {
+        padding-bottom: 100px;
+        &__container {
+            grid-template-columns: 1fr;
+        }
+
+        &__item {
+            transform: translateX(0px) !important;
+            width: 90%;
+            margin: 0 auto;
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .samples {
+        padding-bottom: 50px;
+        &__container {
+            gap: 25px;
         }
     }
 }
