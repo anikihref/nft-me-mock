@@ -2,7 +2,7 @@
     margin-bottom: 140px;
     &__container {
         display: grid;
-        row-gap: 95px;
+        row-gap: 5vw;
         column-gap: 85px;
         grid-template-columns: repeat(2, 1fr);
     }
@@ -12,6 +12,7 @@
     &__title {
         margin-bottom: 18px;
         font-size: rem(56px);
+        font-family: $titleFont;
         line-height: 123%;
     }
 
@@ -102,6 +103,7 @@
     }
 
     &__button-item {
+        background-color: transparent;
         grid-row-start: 23;
         grid-row-end: 25;
         margin-left: auto;
@@ -109,7 +111,6 @@
     }
 
     &__button {
-        background-color: transparent;
         color: $pink;
         font-size: rem(18px);
         font-family: $titleFont;
@@ -123,3 +124,135 @@
     }
 }
 
+@media (max-width: 1024px) {
+    .trending {
+        margin-bottom: 120px;
+        &__title {
+            margin-bottom: 15px;
+            font-size: rem(46px);
+        
+        }
+    
+        &__text {
+            font-size: rem(18px);
+        }
+    
+        
+    
+        &__item-title {
+            font-size: rem(28px);
+        }
+    
+        &__item-info {
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+    
+        &__item-text {
+            font-size: rem(14px);
+        }
+    
+        &__item-price {
+            font-size: rem(14px);
+        }
+
+        &__button {
+            font-size: rem(16px);
+        }
+
+        &__button-style-elem {
+            margin-bottom: 5px;
+        }
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .trending {
+        margin-bottom: 100px;
+        &__container {
+            row-gap: 6vw;
+            column-gap: 40px;
+        }
+
+        &__title {
+            margin-bottom: 10px;
+            font-size: rem(36px);
+        
+        }
+    
+        &__text {
+            font-size: rem(16px);
+        }
+    
+        
+    
+        &__item-title {
+            font-size: rem(24px);
+        }
+    
+        &__item-info {
+            margin-bottom: 8px;
+        }
+    
+        &__item-text {
+            font-size: rem(12px);
+        }
+    
+        &__item-price {
+            font-size: rem(12px);
+        }
+
+        &__button {
+            font-size: rem(12px);
+        }
+
+        &__button-style-elem {
+            margin-bottom: 5px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    
+    .trending {
+        margin-bottom: 60px;
+        .container {
+            grid-template-columns: 1fr !important;
+        }
+
+        &__item1, &__item2, &__item3, &__item4, &__item5, &__item6, &__button-item, &__header-item {
+            grid-row-start: auto;
+            grid-row-end: auto;
+        }
+
+        &__title {
+            text-align: center;
+        
+        }
+    
+        &__text {
+            text-align: center;
+        }
+
+        &__button-item {
+            margin-left: 0;
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .trending {
+        &__title {
+            margin-bottom: 8px;
+            font-size: rem(28px);
+        
+        }
+    
+        &__text {
+            font-size: rem(14px);
+        }
+    }
+    
+}
