@@ -949,7 +949,7 @@ ol {
   text-align: left;
   padding-left: 15%;
   padding-bottom: 10px;
-  padding-right: 50px;
+  padding-right: 20px;
 }
 
 .artists__button-text {
@@ -991,13 +991,17 @@ ol {
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 15px;
+  -webkit-column-gap: 15px;
+     -moz-column-gap: 15px;
+          column-gap: 15px;
+  row-gap: 40px;
   padding-top: 160px;
   padding-bottom: 165px;
 }
 
 .artists__item {
   max-width: 31%;
+  min-width: 280px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1046,11 +1050,9 @@ ol {
 
 .artists__item-button {
   background-color: #D400B3;
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 110%;
   font-family: "PaytoneOne";
-  max-height: 40px;
-  max-width: 140px;
   padding: 7px 38px 13px;
 }
 
@@ -1331,6 +1333,50 @@ ol {
   .trending__button-style-elem {
     margin-bottom: 5px;
   }
+
+  .artists__header {
+    height: 150px;
+  }
+
+  .artists__button {
+    padding-left: 20px;
+  }
+
+  .artists__button-text {
+    font-size: 1rem;
+    margin-top: 10px;
+    margin-bottom: 25px;
+  }
+
+  .artists__button-content {
+    font-size: 1rem;
+  }
+
+  .artists__title {
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0 10px;
+    font-size: 2.875rem;
+  }
+
+  .artists__container {
+    padding-top: 130px;
+    padding-bottom: 135px;
+  }
+
+  .artists__item-name {
+    font-size: 1.75rem;
+    line-height: 140%;
+    margin-bottom: 20px;
+    margin-top: -45px;
+  }
+
+  .artists__item-button {
+    font-size: 1rem;
+    padding: 7px 35px 13px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1512,6 +1558,47 @@ ol {
   .trending__button-style-elem {
     margin-bottom: 5px;
   }
+
+  .artists {
+    margin-top: 100px;
+  }
+
+  .artists__header {
+    height: 130px;
+  }
+
+  .artists__button {
+    padding-left: 10px;
+  }
+
+  .artists__button-text {
+    font-size: 0.875rem;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+
+  .artists__button-content {
+    font-size: 1rem;
+  }
+
+  .artists__title {
+    font-size: 2.25rem;
+  }
+
+  .artists__container {
+    padding-top: 100px;
+    padding-bottom: 105px;
+  }
+
+  .artists__item-name {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    margin-top: -45px;
+  }
+
+  .artists__item-button {
+    font-size: 0.875rem;
+  }
 }
 
 @media (max-width: 576px) {
@@ -1548,6 +1635,29 @@ ol {
 
   .trending__button-item {
     margin-left: 0;
+  }
+
+  .artists__header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    height: auto;
+  }
+
+  .artists__button {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .artists__title {
+    padding-bottom: 20px;
+    width: 100%;
+  }
+
+  .artists__container {
+    padding-top: 60px;
+    padding-bottom: 65px;
   }
 }
 
