@@ -1,60 +1,167 @@
 .input-section {
-    margin-top: 270px;
-    margin-bottom: 115px;
-    position: relative;
+  margin-top: 27%;
+  margin-bottom: 115px;
+  position: relative;
+  &__container {
+    padding-top: 200px;
+    padding-bottom: 95px;
+    background-color: $gray;
+    border-bottom: 5px solid $pink;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: rem(52px);
+    line-height: 120%;
+  }
+
+  &__text {
+    font-size: rem(20px);
+    line-height: 160%;
+    width: 50%;
+    min-width: 300px;
+    text-align: center;
+    margin-top: 18px;
+    margin-bottom: 35px;
+    color: $contentText;
+  }
+
+  &__form {
+    width: 50%;
+    min-width: 280px;
+    display: flex;
+    justify-content: center;
+    height: 50px;
+  }
+
+  &__input {
+    border: 1px solid #606060;
+    padding: 7px 10px;
+    font-size: rem(18px);
+    line-height: 120%;
+    width: 70%;
+    background-color: #363637;
+  }
+  &__button {
+    font-size: rem(18px);
+    line-height: 110%;
+    font-family: $titleFont;
+    width: 30%;
+    background-color: $pink;
+  }
+  &__bg {
+    top: 0px;
+    left: 50%;
+    width: 55%;
+    max-width: calc($containerWidth / 2);
+    transform: translate(-50%, -80%);
+    position: absolute;
+
+    & img {
+        width: 100%;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .input-section {
+    margin-bottom: 65px;
     &__container {
-        padding-top: 200px;
-        padding-bottom: 95px;
-        background-color: $gray;
-        border-bottom: 5px solid $pink;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+      padding-top: 170px;
+      padding-bottom: 75px;
     }
 
     &__title {
-        font-size: rem(52px);
-        line-height: 120%;
+      font-size: rem(46px);
     }
 
     &__text {
-        font-size: rem(20px);
-        line-height: 160%;
-        width: 50%;
-        min-width: 500px;
-        text-align: center;
-        margin-top: 18px;
-        margin-bottom: 35px;
+      font-size: rem(18px);
+      margin-top: 15px;
+      margin-bottom: 30px;
+      width: 80%;
     }
 
     &__form {
-        width: 50%;
-        min-width: 500px;
-        display: flex;
-        justify-content: center;
-        height: 50px;
+          width: 80%;
+          height: 40px;
     }
 
-    &__input {
-        border: 1px solid #606060;
-        padding: 7px 10px;
-        font-size: rem(18px);
-        line-height: 120%;
-        width: 70%;
-        background-color: #363637;
+    &__input, &__button {
+      font-size: rem(16px);
     }
-    &__button {
-        font-size: rem(18px);
-        line-height: 110%;
-        font-family: $titleFont;
-        width: 30%;
-        background-color: $pink;
-    }
-    &__bg {
-        top: 0px;
-        left: 50%;
-        transform: translate(-50%, -80%);
-        position: absolute;
 
+  }
+}
+
+@media (max-width: 768px) {
+    .input-section {
+        margin-bottom: 55px;
+        &__container {
+          padding-top: 130px;
+          padding-bottom: 55px;
+          border-width: 4px;
+        }
+    
+        &__title {
+          font-size: rem(36px);
+        }
+    
+        &__text {
+          font-size: rem(16px);
+          margin-top: 10px;
+          margin-bottom: 25px;
+        }
+    
+        &__form {
+          height: 35px;
+          
+
+        }
+    
+        &__input, &__button {
+          font-size: rem(14px);
+        }
     }
+}
+
+@media (max-width: 576px) {
+  .input-section {
+    &__container {
+      padding-top: 100px;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .input-section {
+    &__container {
+      border-width: 3px;
+      padding-bottom: 10px;
+      padding-top: 80px;
+    }
+
+    &__title {
+      font-size: rem(28px);
+    }
+
+    &__text {
+      width: 90%;
+      font-size: rem(14px);
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .input-section {
+    &__container {
+      padding-top: 60px;
+    }
+
+    &__text {
+      font-size: rem(12px);
+    }
+  }
 }

@@ -1140,7 +1140,7 @@ ol {
 }
 
 .input-section {
-  margin-top: 270px;
+  margin-top: 27%;
   margin-bottom: 115px;
   position: relative;
 }
@@ -1171,15 +1171,16 @@ ol {
   font-size: 1.25rem;
   line-height: 160%;
   width: 50%;
-  min-width: 500px;
+  min-width: 300px;
   text-align: center;
   margin-top: 18px;
   margin-bottom: 35px;
+  color: #E5E5E5;
 }
 
 .input-section__form {
   width: 50%;
-  min-width: 500px;
+  min-width: 280px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1209,10 +1210,16 @@ ol {
 .input-section__bg {
   top: 0px;
   left: 50%;
+  width: 55%;
+  max-width: 600px;
   -webkit-transform: translate(-50%, -80%);
       -ms-transform: translate(-50%, -80%);
           transform: translate(-50%, -80%);
   position: absolute;
+}
+
+.input-section__bg img {
+  width: 100%;
 }
 
 @media (max-width: 1024px) {
@@ -1376,6 +1383,36 @@ ol {
   .artists__item-button {
     font-size: 1rem;
     padding: 7px 35px 13px;
+  }
+
+  .input-section {
+    margin-bottom: 65px;
+  }
+
+  .input-section__container {
+    padding-top: 170px;
+    padding-bottom: 75px;
+  }
+
+  .input-section__title {
+    font-size: 2.875rem;
+  }
+
+  .input-section__text {
+    font-size: 1.125rem;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    width: 80%;
+  }
+
+  .input-section__form {
+    width: 80%;
+    height: 40px;
+  }
+
+  .input-section__input,
+  .input-section__button {
+    font-size: 1rem;
   }
 }
 
@@ -1599,6 +1636,35 @@ ol {
   .artists__item-button {
     font-size: 0.875rem;
   }
+
+  .input-section {
+    margin-bottom: 55px;
+  }
+
+  .input-section__container {
+    padding-top: 130px;
+    padding-bottom: 55px;
+    border-width: 4px;
+  }
+
+  .input-section__title {
+    font-size: 2.25rem;
+  }
+
+  .input-section__text {
+    font-size: 1rem;
+    margin-top: 10px;
+    margin-bottom: 25px;
+  }
+
+  .input-section__form {
+    height: 35px;
+  }
+
+  .input-section__input,
+  .input-section__button {
+    font-size: 0.875rem;
+  }
 }
 
 @media (max-width: 576px) {
@@ -1658,6 +1724,10 @@ ol {
   .artists__container {
     padding-top: 60px;
     padding-bottom: 65px;
+  }
+
+  .input-section__container {
+    padding-top: 100px;
   }
 }
 
@@ -1760,5 +1830,30 @@ ol {
 
   .trending__text {
     font-size: 0.875rem;
+  }
+
+  .input-section__container {
+    border-width: 3px;
+    padding-bottom: 10px;
+    padding-top: 80px;
+  }
+
+  .input-section__title {
+    font-size: 1.75rem;
+  }
+
+  .input-section__text {
+    width: 90%;
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .input-section__container {
+    padding-top: 60px;
+  }
+
+  .input-section__text {
+    font-size: 0.75rem;
   }
 }
