@@ -67,3 +67,48 @@
         margin-right: auto;
     }
 }
+
+@media (max-width: 1024px) {
+    .backed {
+        margin-top: 135px;
+        &__title {
+            font-size: rem(46px);
+            margin-bottom: 15px;
+        }
+
+        &__text {
+            font-size: rem(18px);
+        }
+
+        &__main {
+            margin-top: 55px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .backed {
+        margin-top: 90px;
+        &__title {
+            font-size: rem(36px);
+        }
+
+        &__text {
+            font-size: rem(16px);
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .backed {
+        margin-top: 50px;
+
+        &__title {
+            font-size: rem(28px);
+        }
+
+        &__text {
+            font-size: rem(14px);
+        }
+    }
+}

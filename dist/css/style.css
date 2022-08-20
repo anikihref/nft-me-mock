@@ -1385,6 +1385,23 @@ ol {
     padding: 7px 35px 13px;
   }
 
+  .backed {
+    margin-top: 135px;
+  }
+
+  .backed__title {
+    font-size: 2.875rem;
+    margin-bottom: 15px;
+  }
+
+  .backed__text {
+    font-size: 1.125rem;
+  }
+
+  .backed__main {
+    margin-top: 55px;
+  }
+
   .input-section {
     margin-bottom: 65px;
   }
@@ -1637,6 +1654,18 @@ ol {
     font-size: 0.875rem;
   }
 
+  .backed {
+    margin-top: 90px;
+  }
+
+  .backed__title {
+    font-size: 2.25rem;
+  }
+
+  .backed__text {
+    font-size: 1rem;
+  }
+
   .input-section {
     margin-bottom: 55px;
   }
@@ -1829,6 +1858,18 @@ ol {
   }
 
   .trending__text {
+    font-size: 0.875rem;
+  }
+
+  .backed {
+    margin-top: 50px;
+  }
+
+  .backed__title {
+    font-size: 1.75rem;
+  }
+
+  .backed__text {
     font-size: 0.875rem;
   }
 
