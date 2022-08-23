@@ -97,11 +97,6 @@
     }
 
     &__item-button {
-
-        background-color: $pink;
-        font-size: rem(18px);
-        line-height: 110%;
-        font-family: $titleFont;
         padding: 7px 38px 13px;
     }
 }
@@ -147,7 +142,6 @@
         }
     
         &__item-button {
-            font-size: rem(16px);
             padding: 7px 35px 13px;
         }
     }
@@ -189,11 +183,6 @@
             margin-bottom: 20px;
             margin-top: -45px;
         }
-    
-        &__item-button {
-            font-size: rem(14px);
-        }
-
     }
 }
 

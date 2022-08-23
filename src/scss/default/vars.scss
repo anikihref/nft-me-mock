@@ -1,3 +1,5 @@
+@import 'mixins';
+
 // fonts
 $mainFont: 'SourceSansPro';
 $titleFont: 'PaytoneOne';
@@ -20,6 +22,12 @@ $containerWidth: 1200px;
     height: 15px;
     border-right: 4px solid $pink;
     border-top: 4px solid $pink;
+}
 
+%button {
+    background-color: $pink;
+    font-size: rem(18px);
+    line-height: 110%;
+    font-family: $titleFont;
 }
 

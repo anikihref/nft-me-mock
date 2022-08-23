@@ -45,11 +45,7 @@
     background-color: #363637;
   }
   &__button {
-    font-size: rem(18px);
-    line-height: 110%;
-    font-family: $titleFont;
     width: 30%;
-    background-color: $pink;
   }
   &__bg {
     top: 0px;
@@ -89,7 +85,7 @@
           height: 40px;
     }
 
-    &__input, &__button {
+    &__input {
       font-size: rem(16px);
     }
 
@@ -121,7 +117,7 @@
 
         }
     
-        &__input, &__button {
+        &__input {
           font-size: rem(14px);
         }
     }

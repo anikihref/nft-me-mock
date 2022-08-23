@@ -1,5 +1,4 @@
-// file for page null styles 
-
+// file for page null styles
 
 * {
   box-sizing: border-box;
@@ -15,7 +14,8 @@ html {
   font-size: $pageFontSize;
 }
 
-body, html {
+body,
+html {
   height: 100%;
 }
 
@@ -24,11 +24,18 @@ body {
   background-color: $black;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-size: 1rem;
+  font-family: $titleFont;
 }
 
-button, a {
+button,
+a {
   cursor: pointer;
 }
 
@@ -36,7 +43,8 @@ a {
   text-decoration: none;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
@@ -55,4 +63,53 @@ ul, ol {
 
 .main {
   flex: 1 1 auto;
+}
+
+.link {
+  color: $contentText;
+  transition: 150ms;
+  &:hover {
+    color: $pink;
+  }
+}
+
+.button {
+  @extend %button;
+  transition: all .3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  &::after {
+    content: '';
+    top: 0;
+    left: 0;
+    background-color: #ae1497;
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    z-index: -1;
+    transition: all .3s;
+  }
+
+  &:hover:after {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .button {
+    font-size: rem(16px);
+  }
+}
+
+@media (max-width: 768px) {
+  .button {
+    font-size: rem(14px);
+  }
+}
+
+@media (max-width: 425px) {
+  .button {
+    font-size: rem(12px);
+  }
 }
