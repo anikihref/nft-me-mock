@@ -1,6 +1,7 @@
 .artists__button-style-element,
 .trending__button-style-elem,
-.view-art-works__angle {
+.view-art-works__angle,
+.angle-button::before {
   width: 15px;
   height: 15px;
   border-right: 4px solid #D400B3;
@@ -123,6 +124,68 @@ ol {
 
 .button:hover:after {
   width: 100%;
+}
+
+.angle-button {
+  position: relative;
+  color: #D400B3;
+  font-family: "PaytoneOne";
+  font-size: 1.125rem;
+}
+
+.angle-button::before {
+  -webkit-transition: 0.7s all;
+  -o-transition: 0.7s all;
+  transition: 0.7s all;
+  content: "";
+  -webkit-transform: translateY(-130%);
+      -ms-transform: translateY(-130%);
+          transform: translateY(-130%);
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+.angle-button:hover {
+  -webkit-animation: angle-button-animation 2s infinite;
+          animation: angle-button-animation 2s infinite;
+  -webkit-animation-delay: 800ms;
+          animation-delay: 800ms;
+}
+
+.angle-button:hover:before {
+  left: -10%;
+  -webkit-transform: rotate(-180deg) translateY(-75%);
+      -ms-transform: rotate(-180deg) translateY(-75%);
+          transform: rotate(-180deg) translateY(-75%);
+}
+
+@-webkit-keyframes angle-button-animation {
+  0% {
+    opacity: 1;
+  }
+
+  30% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes angle-button-animation {
+  0% {
+    opacity: 1;
+  }
+
+  30% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 @font-face {
@@ -944,6 +1007,9 @@ ol {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .trending__button {
@@ -1254,7 +1320,8 @@ ol {
 }
 
 @media (max-width: 1024px) {
-  .button {
+  .button,
+  .angle-button {
     font-size: 1rem;
   }
 
@@ -1491,7 +1558,8 @@ ol {
 }
 
 @media (max-width: 768px) {
-  .button {
+  .button,
+  .angle-button {
     font-size: 0.875rem;
   }
 
@@ -1853,7 +1921,8 @@ ol {
 }
 
 @media (max-width: 425px) {
-  .button {
+  .button,
+  .angle-button {
     font-size: 0.75rem;
   }
 

@@ -75,12 +75,12 @@ ol {
 
 .button {
   @extend %button;
-  transition: all .3s;
+  transition: all 0.3s;
   position: relative;
   overflow: hidden;
   z-index: 1;
   &::after {
-    content: '';
+    content: "";
     top: 0;
     left: 0;
     background-color: #ae1497;
@@ -88,7 +88,7 @@ ol {
     height: 100%;
     width: 0%;
     z-index: -1;
-    transition: all .3s;
+    transition: all 0.3s;
   }
 
   &:hover:after {
@@ -97,19 +97,83 @@ ol {
 }
 
 @media (max-width: 1024px) {
-  .button {
+  .button,
+  .angle-button {
     font-size: rem(16px);
   }
 }
 
 @media (max-width: 768px) {
-  .button {
+  .button,
+  .angle-button {
     font-size: rem(14px);
   }
 }
 
 @media (max-width: 425px) {
-  .button {
+  .button,
+  .angle-button {
     font-size: rem(12px);
   }
 }
+
+.angle-button {
+  position: relative;
+  color: $pink;
+  font-family: $titleFont;
+  font-size: rem(18px);
+
+
+
+  &::before {
+    transition: .7s all;
+    content: "";
+    transform: translateY(-130%);
+    top: 0;
+    left: 0;
+    position: absolute;
+    @extend %angle;
+  }
+
+  &:hover {
+    animation: angle-button-animation 2s infinite;
+    animation-delay: 800ms;
+    &:before {
+      left: -10%;
+      transform: rotate(-180deg) translateY(-75%);
+      // animation: angle-button-size 600ms 700ms forwards;
+
+    }
+  }
+}
+
+@keyframes angle-button-animation {
+  0% {
+    opacity: 1;
+  }
+
+  30% {
+    opacity: .5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+// @keyframes angle-button-size {
+//   20% {
+//     width: 15px;
+//     height: 15px;
+//     border-right: 4px solid $pink;
+//     border-top: 4px solid $pink;
+
+//   }
+
+//   100% {
+//     transform: translateY(-20%) rotate(-180deg);
+//     width: 118%;
+//     height: 180%;
+//     border: 2px solid $pink;
+//   }
+// }
