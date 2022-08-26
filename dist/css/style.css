@@ -792,6 +792,15 @@ ol {
   background-color: #262627;
   border: 1px solid #858586;
   padding: 45px 17px 60px;
+  -webkit-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+.nft-steps__item:hover {
+  -webkit-transform: scale(102%) translateY(-12px);
+      -ms-transform: scale(102%) translateY(-12px);
+          transform: scale(102%) translateY(-12px);
 }
 
 .nft-steps__item-circle {

@@ -1,9 +1,6 @@
 .nft-steps {
     margin-top: 175px;
     margin-bottom: 185px;
-    &__container {
-        
-    }
 
     &__title {
         font-size: rem(52px);
@@ -29,6 +26,10 @@
         background-color: $gray;
         border: 1px solid $lightGray;
         padding: 45px 17px 60px;
+        transition: .3s all;
+        &:hover {
+            transform: scale(102%) translateY(-12px);
+        }
     }
 
     &__item-circle {
@@ -139,7 +140,6 @@
         &__item {
             padding: 20px 10px;
             width: 100%;
-            
         }
     
         &__item-circle {
