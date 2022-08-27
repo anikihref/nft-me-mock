@@ -220,6 +220,7 @@ ol {
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
+  background-color: rgba(57, 53, 53, 0.6);
 }
 
 .view-art-works:hover .letter {
@@ -542,8 +543,8 @@ ol {
 }
 
 .header__watch-btn.out {
-  -webkit-animation: watch-btn-border-out 1000ms forwards;
-          animation: watch-btn-border-out 1000ms forwards;
+  -webkit-animation: watch-btn-border-out 600ms forwards;
+          animation: watch-btn-border-out 600ms forwards;
 }
 
 .header__btn-text {
@@ -1839,6 +1840,7 @@ ol {
     padding: 25px 0;
     z-index: 100;
     position: relative;
+    border-width: 3px;
   }
 
   .header__btn-text {
@@ -2184,6 +2186,10 @@ ol {
 
   .header__content {
     min-height: 200px;
+  }
+
+  .header__watch-btn {
+    border-width: 2px;
   }
 
   .burger {

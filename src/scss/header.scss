@@ -49,7 +49,7 @@
   }
 
   &__watch-btn.out {
-    animation: watch-btn-border-out 1000ms forwards;
+    animation: watch-btn-border-out 600ms forwards;
   }
 
   &__btn-text {
@@ -253,6 +253,7 @@
       min-height: 450px;
     }
 
+
     &__bg-art {
       left: 80%;
       bottom: 30%;
@@ -283,6 +284,7 @@
       padding: 25px 0;
       z-index: 100;
       position: relative;
+      border-width: 3px;
     }
 
     &__btn-text {
@@ -344,6 +346,10 @@
 
     &__content {
       min-height: 200px;
+    }
+
+    &__watch-btn {
+      border-width: 2px;
     }
   }
 

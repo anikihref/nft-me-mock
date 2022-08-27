@@ -8,6 +8,8 @@
     transition: .4s all;
     &:hover {
       transform: rotate(45deg);
+      background-color: rgba(57, 53, 53, 0.6);
+
     }
 
     &:hover .letter {
