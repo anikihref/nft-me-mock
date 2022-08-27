@@ -11,7 +11,7 @@
 
   &__container {
     position: relative;
-    z-index: 50;
+    z-index: 30;
     flex-grow: 1;
     width: 100%;
   }
@@ -107,9 +107,11 @@
 
   &__bg-art {
     position: absolute;
-    width: calc(160 / 792) * 100%;
-    bottom: calc(60 / 688) * 100%;
-    left: calc(130 / 792) * 100%;
+    z-index: 1000;
+    width: 11%;
+    bottom: 15%;
+    left: 55%;
+    min-width: 120px;
   }
 }
 
@@ -249,6 +251,11 @@
     &__content {
       margin-top: 90px;
       min-height: 450px;
+    }
+
+    &__bg-art {
+      left: 80%;
+      bottom: 30%;
     }
   }
 }
@@ -397,7 +404,6 @@
   50% {
     border-left-color: #650e58;
     border-bottom-color:#650e58;
-    // border-left-color:$pink;
   }
 
   75% {

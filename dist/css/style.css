@@ -206,11 +206,26 @@ ol {
 
 .view-art-works {
   position: relative;
-  z-index: 100;
+  z-index: 1000;
   width: 100%;
   aspect-ratio: 1/1;
   border: 1px solid #fff;
   background-color: rgba(255, 255, 255, 0.2);
+  -webkit-transition: 0.4s all;
+  -o-transition: 0.4s all;
+  transition: 0.4s all;
+}
+
+.view-art-works:hover {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.view-art-works:hover .letter {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .view-art-works__inner {
@@ -234,10 +249,18 @@ ol {
           align-items: center;
 }
 
+.view-art-works__angle {
+  -webkit-animation: angle 4s forwards infinite;
+          animation: angle 4s forwards infinite;
+}
+
 .letter {
   line-height: 20px;
   font-size: 14px;
   position: absolute;
+  -webkit-transition: 0.4s all;
+  -o-transition: 0.4s all;
+  transition: 0.4s all;
 }
 
 .letter1 {
@@ -360,6 +383,100 @@ ol {
   top: 7.3333333333%;
 }
 
+@-webkit-keyframes angle {
+  0% {
+    border-right: 4px solid #D400B3;
+    border-top: 4px solid #D400B3;
+    border-left: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    -webkit-transform: scale(100%);
+            transform: scale(100%);
+  }
+
+  25% {
+    border-right: 4px solid #D400B3;
+    border-top: 4px solid #D400B3;
+    border-left: 4px solid #D400B3;
+    border-bottom: 4px solid #D400B3;
+    -webkit-transform: scale(130%);
+            transform: scale(130%);
+  }
+
+  50% {
+    border-left: 4px solid #D400B3;
+    border-bottom: 4px solid #D400B3;
+    border-right: 4px solid transparent;
+    border-top: 4px solid transparent;
+    -webkit-transform: scale(100%);
+            transform: scale(100%);
+  }
+
+  75% {
+    border-right: 4px solid #D400B3;
+    border-top: 4px solid #D400B3;
+    border-left: 4px solid #D400B3;
+    border-bottom: 4px solid #D400B3;
+    -webkit-transform: scale(130%);
+            transform: scale(130%);
+  }
+
+  100% {
+    border-right: 4px solid #D400B3;
+    border-top: 4px solid #D400B3;
+    border-left: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    -webkit-transform: scale(100%);
+            transform: scale(100%);
+  }
+}
+
+@keyframes angle {
+  0% {
+    border-right: 4px solid #D400B3;
+    border-top: 4px solid #D400B3;
+    border-left: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    -webkit-transform: scale(100%);
+            transform: scale(100%);
+  }
+
+  25% {
+    border-right: 4px solid #D400B3;
+    border-top: 4px solid #D400B3;
+    border-left: 4px solid #D400B3;
+    border-bottom: 4px solid #D400B3;
+    -webkit-transform: scale(130%);
+            transform: scale(130%);
+  }
+
+  50% {
+    border-left: 4px solid #D400B3;
+    border-bottom: 4px solid #D400B3;
+    border-right: 4px solid transparent;
+    border-top: 4px solid transparent;
+    -webkit-transform: scale(100%);
+            transform: scale(100%);
+  }
+
+  75% {
+    border-right: 4px solid #D400B3;
+    border-top: 4px solid #D400B3;
+    border-left: 4px solid #D400B3;
+    border-bottom: 4px solid #D400B3;
+    -webkit-transform: scale(130%);
+            transform: scale(130%);
+  }
+
+  100% {
+    border-right: 4px solid #D400B3;
+    border-top: 4px solid #D400B3;
+    border-left: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    -webkit-transform: scale(100%);
+            transform: scale(100%);
+  }
+}
+
 .header {
   background-color: #0D0D0E;
   position: relative;
@@ -379,7 +496,7 @@ ol {
 
 .header__container {
   position: relative;
-  z-index: 50;
+  z-index: 30;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -492,9 +609,11 @@ ol {
 
 .header__bg-art {
   position: absolute;
-  width: 20.202020202%;
-  bottom: 8.7209302326%;
-  left: 16.4141414141%;
+  z-index: 1000;
+  width: 11%;
+  bottom: 15%;
+  left: 55%;
+  min-width: 120px;
 }
 
 .navbar {
@@ -1469,6 +1588,11 @@ ol {
   .header__content {
     margin-top: 90px;
     min-height: 450px;
+  }
+
+  .header__bg-art {
+    left: 80%;
+    bottom: 30%;
   }
 
   .footer__list {
