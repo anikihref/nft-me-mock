@@ -188,6 +188,122 @@ ol {
   }
 }
 
+.image-viewer {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  bottom: 0%;
+  right: 0%;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  -webkit-transition: 0.6s all;
+  -o-transition: 0.6s all;
+  transition: 0.6s all;
+  z-index: 1100;
+  visibility: hidden;
+}
+
+.image-viewer.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.image-viewer__img {
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.image-viewer__img img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.image-viewer__close-btn {
+  position: absolute;
+  -webkit-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
+  right: 0;
+  top: 0;
+  background-color: transparent;
+  width: 100px;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.image-viewer__close-btn:hover {
+  background-color: rgba(212, 0, 180, 0.568627451);
+}
+
+.image-viewer__close-btn svg {
+  max-width: 80%;
+}
+
+.full-image {
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  -webkit-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  transition: 0.5s all;
+}
+
+.full-image:hover .view-btn {
+  visibility: visible;
+  opacity: 1;
+}
+
+.view-btn {
+  opacity: 0;
+  -webkit-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  transition: 0.5s all;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1010;
+  visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "PaytoneOne";
+  font-size: 1.25rem;
+}
+
+.view-btn::before {
+  height: 5px;
+  width: 100%;
+  content: "";
+  background-color: #D400B3;
+  bottom: 0%;
+  left: 0;
+  position: absolute;
+}
+
 @font-face {
   font-family: PaytoneOne;
   font-display: swap;
@@ -952,6 +1068,9 @@ ol {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transition: 0.7s all;
+  -o-transition: 0.7s all;
+  transition: 0.7s all;
 }
 
 .samples__container {
@@ -966,6 +1085,8 @@ ol {
   max-height: 400px;
   max-width: 470px;
   aspect-ratio: 7/6;
+  cursor: pointer;
+  position: relative;
 }
 
 .samples__item:nth-child(1n+4) {
@@ -1810,6 +1931,23 @@ ol {
   .button,
   .angle-button {
     font-size: 0.875rem;
+  }
+
+  .image-viewer__img {
+    min-width: 300px;
+  }
+
+  .image-viewer__close-btn {
+    width: 80px;
+    height: 80px;
+  }
+
+  .view-btn {
+    font-size: 0.875rem;
+  }
+
+  .view-btn::before {
+    height: 3px;
   }
 
   .view-art-works {

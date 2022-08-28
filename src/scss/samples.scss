@@ -5,6 +5,7 @@
     padding-bottom: 175px;
     display: flex;
     justify-content: center;
+    transition: .7s all;
     &__container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -15,6 +16,9 @@
         max-height: 400px;
         max-width: 470px;
         aspect-ratio: 7/6;
+        cursor: pointer;
+        position: relative;
+
         &:nth-child(1n + 4) {
             transform: translateX(25px);
         }
