@@ -20,6 +20,14 @@
     font-size: rem(84px);
     line-height: 119%;
     width: 660px;
+    transition: 0.8s all ease-in-out;
+    transform: translateY(30%);
+    opacity: 0;
+
+    &.scrolled {
+      transform: translateY(0%);
+      opacity: 1;
+    }
   }
 
   &__text {
@@ -28,6 +36,14 @@
     font-size: rem(20px);
     line-height: 160%;
     width: 640px;
+    transform: translateY(80%);
+    transition: 0.8s all ease-in-out;
+    opacity: 0;
+    &.scrolled {
+      transform: translateY(0%);
+      transition-delay: .4s;
+      opacity: 1;
+    }
   }
 
   &__watch-btn {
