@@ -7,6 +7,23 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
+    &__item {
+        transition: 1s all ease-in-out .1s;
+        opacity: 0;
+
+        &:nth-child(even) {
+            transform: translateX(50%);
+        } 
+        
+        &:nth-child(odd) {
+            transform: translateX(-50%);
+        }   
+
+        &.scrolled {
+            transform: translateX(0%); 
+            opacity: 1;
+        }
+    }
    
 
     &__title {
@@ -14,12 +31,24 @@
         font-size: rem(56px);
         font-family: $titleFont;
         line-height: 123%;
+        @extend %titleScrollAnim;
+
+        &.scrolled {
+            opacity: 1;
+            transform: translate(0%, 0%);
+        }
     }
 
     &__text {
         font-size: rem(20px);
         line-height: 160%;
         color: $contentText;
+        @extend %textScrollAnim;
+
+        &.scrolled {
+            opacity: 1;
+            transform: translate(0%, 0%);
+        }
     }
 
     

@@ -20,9 +20,8 @@
     font-size: rem(84px);
     line-height: 119%;
     width: 660px;
-    transition: 0.8s all ease-in-out;
+    @extend %titleScrollAnim;
     transform: translateY(30%);
-    opacity: 0;
 
     &.scrolled {
       transform: translateY(0%);
@@ -37,9 +36,8 @@
     font-size: rem(20px);
     line-height: 160%;
     width: 640px;
+    @extend %textScrollAnim;
     transform: translateY(60%);
-    transition: 0.8s all ease-in-out;
-    opacity: 0;
     &.scrolled {
       transform: translateY(0%);
       transition-delay: 0.6s;
@@ -154,12 +152,7 @@
     max-width: 300px;
   }
 }
-
-.navbar {
-  min-height: 60px;
-  z-index: 20;
-  position: absolute;
-  width: 100%;
+.header .navbar  {
   transform: translate(0%, -99%);
   opacity: 0;
   transition: 1s all ease-out 0.3s;
@@ -168,6 +161,13 @@
     opacity: 1;
     transform: translate(0%, 0%);
   }
+}
+.navbar {
+  min-height: 60px;
+  z-index: 20;
+  position: absolute;
+  width: 100%;
+
 
   &__container {
     display: flex;

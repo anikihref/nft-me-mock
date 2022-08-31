@@ -31,3 +31,14 @@ $containerWidth: 1200px;
     font-family: $titleFont;
 }
 
+%titleScrollAnim {
+    transform: translate(-30%, 0%);
+    opacity: 0;
+    transition: 0.8s all ease-in-out;
+}
+
+%textScrollAnim {
+    transform: translate(-30%, 0%);
+    opacity: 0;
+    transition: 0.8s all ease-in-out .15s;
+}
