@@ -25,7 +25,7 @@ function animateOnScroll() {
       && window.scrollY < itemOffset + itemHeight
     ) {
       item.classList.add('scrolled');
-    } else {
+    } else if (!item.classList.contains('anim-once')) {
       item.classList.remove('scrolled');
     }
   });

@@ -27,6 +27,7 @@
     &.scrolled {
       transform: translateY(0%);
       opacity: 1;
+      transition-delay: 0.3s;
     }
   }
 
@@ -36,12 +37,12 @@
     font-size: rem(20px);
     line-height: 160%;
     width: 640px;
-    transform: translateY(80%);
+    transform: translateY(60%);
     transition: 0.8s all ease-in-out;
     opacity: 0;
     &.scrolled {
       transform: translateY(0%);
-      transition-delay: .4s;
+      transition-delay: 0.6s;
       opacity: 1;
     }
   }
@@ -57,15 +58,18 @@
     width: 52%;
     max-height: 120px;
     border: 4px solid transparent;
-  }
 
-  &__watch-btn.in {
-    animation: watch-btn-border-in 1000ms forwards;
-    
-  }
+    &.scrolled {
+      animation: watch-btn-border-appear 2500ms forwards 1400ms;
+    }
 
-  &__watch-btn.out {
-    animation: watch-btn-border-out 600ms forwards;
+    &.out {
+      animation: watch-btn-border-out 600ms forwards;
+    }
+
+    &.in {
+      animation: watch-btn-border-in 1000ms forwards;
+    }
   }
 
   &__btn-text {
@@ -91,12 +95,31 @@
     position: absolute;
     top: 0;
     right: 0;
+    overflow: hidden;
     width: 54vw;
     max-width: 800px;
     z-index: 10;
     & img {
       width: 100%;
     }
+
+    &.scrolled .header__bg-sroll-anim {
+      top: 100%;
+    }
+  }
+
+  &__bg-sroll-anim {
+    transition: 1.7s all ease-in-out .3s;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    border-top: 5px solid $pink;
+    background-color: $black;
+    z-index: 150;
+    position: absolute;
   }
 
   &__bg-element1 {
@@ -128,6 +151,7 @@
     bottom: 15%;
     left: 55%;
     min-width: 120px;
+    max-width: 300px;
   }
 }
 
@@ -136,6 +160,15 @@
   z-index: 20;
   position: absolute;
   width: 100%;
+  transform: translate(0%, -99%);
+  opacity: 0;
+  transition: 1s all ease-out 0.3s;
+
+  &.scrolled {
+    opacity: 1;
+    transform: translate(0%, 0%);
+  }
+
   &__container {
     display: flex;
     flex-direction: row;
@@ -269,7 +302,6 @@
       min-height: 450px;
     }
 
-
     &__bg-art {
       left: 80%;
       bottom: 30%;
@@ -386,49 +418,91 @@
 
 @keyframes watch-btn-border-in {
   25% {
-    border-top-color:$pink;
+    border-top-color: $pink;
   }
 
   50% {
-    border-top-color:$pink;
+    border-top-color: $pink;
     border-right-color: #650e58;
   }
 
   75% {
-    border-bottom-color:#650e58;
-    border-top-color:$pink;
+    border-bottom-color: #650e58;
+    border-top-color: $pink;
     border-right-color: #650e58;
   }
 
   100% {
-    border-left-color:$pink;
-    border-top-color:$pink;
+    border-left-color: $pink;
+    border-top-color: $pink;
     border-right-color: #650e58;
-    border-bottom-color:#650e58;
-
+    border-bottom-color: #650e58;
   }
 }
 
 @keyframes watch-btn-border-out {
   0% {
-    border-bottom-color:#650e58;
-    border-top-color:$pink;
-    border-left-color:$pink;
+    border-bottom-color: #650e58;
+    border-top-color: $pink;
+    border-left-color: $pink;
     border-right-color: #650e58;
   }
 
   25% {
-    border-bottom-color:#650e58;
-    border-left-color:$pink;
+    border-bottom-color: #650e58;
+    border-left-color: $pink;
     border-right-color: #650e58;
   }
 
   50% {
     border-left-color: #650e58;
-    border-bottom-color:#650e58;
+    border-bottom-color: #650e58;
   }
 
   75% {
+    border-left-color: #650e58;
+  }
+
+  100% {
+    border-color: transparent;
+  }
+}
+
+@keyframes watch-btn-border-appear {
+  14% {
+    border-top-color: $pink;
+  }
+
+  28% {
+    border-top-color: $pink;
+    border-right-color: #650e58;
+  }
+
+  42% {
+    border-bottom-color: #650e58;
+    border-top-color: $pink;
+    border-right-color: #650e58;
+  }
+
+  50% {
+    border-left-color: $pink;
+    border-top-color: $pink;
+    border-right-color: #650e58;
+    border-bottom-color: #650e58;
+  }
+
+  64% {
+    border-bottom-color: #650e58;
+    border-left-color: $pink;
+    border-right-color: #650e58;
+  }
+
+  78% {
+    border-left-color: #650e58;
+    border-bottom-color: #650e58;
+  }
+
+  92% {
     border-left-color: #650e58;
   }
 
