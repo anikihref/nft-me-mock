@@ -1,5 +1,6 @@
 .trending {
     margin-bottom: 140px;
+    overflow: hidden;
     &__container {
         display: grid;
         row-gap: 5vw;

@@ -16,6 +16,7 @@
 }
 
 .trending__title,
+.nft-steps__title,
 .header__title {
   -webkit-transform: translate(-30%, 0%);
       -ms-transform: translate(-30%, 0%);
@@ -1299,6 +1300,16 @@ ol {
   font-family: "PaytoneOne";
   text-align: center;
   margin-bottom: 50px;
+  -webkit-transform: translateY(-80%);
+      -ms-transform: translateY(-80%);
+          transform: translateY(-80%);
+}
+
+.nft-steps__title.scrolled {
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
 }
 
 .nft-steps__main {
@@ -1335,6 +1346,23 @@ ol {
   -webkit-transform: scale(102%) translateY(-12px);
       -ms-transform: scale(102%) translateY(-12px);
           transform: scale(102%) translateY(-12px);
+}
+
+.nft-steps__item.scrolled .nft-steps__item-scroll-anim {
+  top: 100%;
+}
+
+.nft-steps__item-scroll-anim {
+  -webkit-transition: 1s all ease-in-out 0.1s;
+  -o-transition: 1s all ease-in-out 0.1s;
+  transition: 1s all ease-in-out 0.1s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-top: 4px solid #D400B3;
+  width: 100%;
+  height: 100%;
+  background-color: #0D0D0E;
 }
 
 .nft-steps__item-circle {
@@ -1419,6 +1447,7 @@ ol {
 
 .trending {
   margin-bottom: 140px;
+  overflow: hidden;
 }
 
 .trending__container {
@@ -2285,6 +2314,12 @@ ol {
 
   .nft-steps__item {
     width: 100%;
+  }
+
+  .nft-steps__item:hover {
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
   }
 
   .nft-steps__item-circle {
