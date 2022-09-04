@@ -14,21 +14,37 @@
         font-size: rem(20px);
         line-height: 160%;
         color: $contentText;
+        @extend %textScrollAnim;
+        &.scrolled {
+            opacity: 1;
+            transform: translate(0, 0);
+        }
     }
 
     &__main {
         display: flex;
-        gap: 75px;
+        justify-content: space-between;
+        width: 40%;
 
     }
 
     &__category {
-        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // text-align: center;
+        width: 30%;
     }
 
     &__number {
         font-size: rem(56px);
         font-family: $titleFont;
+        display: flex;
+        align-items: center;
+        & div {
+        font-family: $titleFont;
+
+        }
     }
 
     &__name {
@@ -49,10 +65,14 @@
             text-align: center;
             width: 60%;
             font-size: rem(20px);
+            transform: translate(0, 50%);
         }
     
         &__main {
             margin-bottom: 40px;
+        width: 90%;
+        max-width: 600px;
+
         }
     
         &__number {

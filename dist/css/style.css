@@ -28,6 +28,7 @@
 }
 
 .trending__text,
+.statistics__text,
 .header__text {
   -webkit-transform: translate(-30%, 0%);
       -ms-transform: translate(-30%, 0%);
@@ -373,6 +374,7 @@ ol {
 }
 
 .trending__text,
+.statistics__text,
 .header__text {
   -webkit-transform: translate(-30%, 0%);
       -ms-transform: translate(-30%, 0%);
@@ -1622,19 +1624,49 @@ ol {
   color: #E5E5E5;
 }
 
+.statistics__text.scrolled {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
 .statistics__main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 75px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 40%;
 }
 
 .statistics__category {
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30%;
 }
 
 .statistics__number {
   font-size: 3.5rem;
+  font-family: "PaytoneOne";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.statistics__number div {
   font-family: "PaytoneOne";
 }
 
@@ -2234,10 +2266,15 @@ ol {
     text-align: center;
     width: 60%;
     font-size: 1.25rem;
+    -webkit-transform: translate(0, 50%);
+        -ms-transform: translate(0, 50%);
+            transform: translate(0, 50%);
   }
 
   .statistics__main {
     margin-bottom: 40px;
+    width: 90%;
+    max-width: 600px;
   }
 
   .statistics__number {

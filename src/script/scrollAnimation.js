@@ -21,8 +21,7 @@ function animateOnScroll() {
     }
 
     if (
-      window.scrollY > itemOffset - itemPoint
-      && window.scrollY < itemOffset + itemHeight
+      window.scrollY > itemOffset - itemPoint && window.scrollY < itemOffset + itemHeight
     ) {
       item.classList.add('scrolled');
     } else if (!item.classList.contains('anim-once')) {
@@ -35,3 +34,65 @@ if (items.length > 0) {
   window.addEventListener('scroll', animateOnScroll);
   animateOnScroll();
 }
+
+function animateStatisticsDigits() {
+  function digitsCountersAnimate(digitsCounter) {
+    let startTimestamp = null;
+    const duration = parseFloat(digitsCounter.dataset.digitsCounter, 10)
+      ? parseFloat(digitsCounter.dataset.digitsCounter, 10)
+      : 1000;
+    const startValue = parseFloat(digitsCounter.dataset.maxValue, 10)
+    || parseFloat(digitsCounter.innerHTML);
+
+    const startPosition = 0;
+    const step = (timestamp) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      if (progress === 1 && Math.floor(progress * (startPosition + startValue)) !== startValue) {
+        // eslint-disable-next-line no-param-reassign
+        digitsCounter.innerHTML = startValue;
+      } else {
+        // eslint-disable-next-line no-param-reassign
+        digitsCounter.innerHTML = Math.floor(progress * (startPosition + startValue));
+      }
+
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      }
+    };
+    window.requestAnimationFrame(step);
+  }
+
+  function digitsCountersInit(digitsCountersItems) {
+    const digitsCounters = digitsCountersItems || document.querySelectorAll('[data-digits-counter]');
+
+    if (digitsCounters) {
+      digitsCounters.forEach((digitsCounter) => {
+        digitsCountersAnimate(digitsCounter);
+      });
+    }
+  }
+
+  const options = {
+    threshold: 0.3,
+  };
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const targetElement = entry.target;
+        const digitsCountersItems = targetElement.querySelectorAll('[ data-digits-counter]');
+        if (digitsCountersItems.length) {
+          digitsCountersInit(digitsCountersItems);
+        }
+      }
+    });
+  }, options);
+
+  const sections = document.querySelectorAll('.digits-container');
+  if (sections.length) {
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+  }
+}
+window.addEventListener('load', animateStatisticsDigits);
