@@ -1,0 +1,44 @@
+@import 'vars';
+
+@keyframes blink {
+    14% {
+        border-top-color: $pink;
+      }
+    
+      28% {
+        border-top-color: $pink;
+        border-right-color: #650e58;
+      }
+    
+      42% {
+        border-bottom-color: #650e58;
+        border-top-color: $pink;
+        border-right-color: #650e58;
+      }
+    
+      50% {
+        border-left-color: $pink;
+        border-top-color: $pink;
+        border-right-color: #650e58;
+        border-bottom-color: #650e58;
+      }
+    
+      64% {
+        border-bottom-color: #650e58;
+        border-left-color: $pink;
+        border-right-color: #650e58;
+      }
+    
+      78% {
+        border-left-color: #650e58;
+        border-bottom-color: #650e58;
+      }
+    
+      92% {
+        border-left-color: #650e58;
+      }
+    
+      100% {
+        border-color: transparent;
+      }
+}
