@@ -19,23 +19,27 @@
         padding-right: 20px;
     }
 
-    &__button-style-element {
-        @extend %angle;
-    }
-
     &__button-text {
+        background-color: transparent;
+        width: fit-content;
         font-size: rem(18px);
         line-height: 110%;
         margin-top: 10px;
         margin-bottom: 25px;
         color: $pink;
         font-family: $titleFont;
+
     }
 
     &__button-content {
         color: $contentText;
         font-size: rem(20px);
         line-height: 160%;
+        @extend %textScrollAnim;
+        &.scrolled {
+            opacity: 1;
+            transform: translate(0%, 0%);
+        }
     }
 
     &__title {
@@ -45,8 +49,21 @@
         height: 100%;
         width: 50%;
         background-color: $black;
+        
+    }
+
+    &__title-text {
         font-size: rem(52px);
+        position: relative;
         line-height: 120%;
+        @extend %titleScrollAnim;
+        transform: translate(0, -100%);
+
+        &.scrolled {
+            opacity: 1;
+            transform: translate(0%, 0%);
+        }
+
     }
 
     &__container {
@@ -65,6 +82,26 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        transition: all 1s ease-in-out;
+        transition-delay: 4s;
+        opacity: 0;
+        transform: translate(0, -15%);
+        &.scrolled {
+            transform: translate(0, 0);
+            opacity: 1;
+        }
+    }
+
+    &__item:nth-child(3n + 1).scrolled {
+        transition-delay: .2s;
+    }
+
+    &__item:nth-child(3n + 2).scrolled {
+        transition-delay: .7s;
+    }
+
+    &__item:nth-child(3n + 3).scrolled {
+        transition-delay: 1.3s;
     }
 
     &__item-img {
@@ -81,6 +118,7 @@
         transform: translateY(-50%);
         width: 33%;
         aspect-ratio: 1 / 1;
+        
         & img {
             object-fit: cover;
             width: 100%;
@@ -120,11 +158,14 @@
         &__button-content {
             font-size: rem(16px);
         }
-    
+
         &__title {
-            text-align: center;
             justify-content: center;
             padding: 0 10px;
+        }
+    
+        &__title-text {
+            text-align: center;
             font-size: rem(46px);
         }
 
@@ -147,6 +188,29 @@
     }
 }
 
+@media (max-width: 889px) {
+    // breakpoint when items came 2 in row
+    .artists {
+        &__item:nth-child(2n + 1).scrolled {
+            transition-delay: .2s;
+        }
+    
+        &__item:nth-child(2n + 2).scrolled {
+            transition-delay: .7s;
+        }
+    }
+}
+
+@media (max-width: 595px) {
+    // breakpoint when items came 1 in row
+    .artists {
+        &__item.scrolled {
+            transition-delay: .2s;
+        }
+    }
+    
+}
+
 @media (max-width: 768px) {
     .artists {
         margin-top: 100px;
@@ -160,15 +224,15 @@
     
         &__button-text {
             font-size: rem(14px);
-            margin-top: 10px;
-            margin-bottom: 15px;
+            margin: 10px auto 20px;
         }
     
         &__button-content {
             font-size: rem(16px);
+            text-align: center;
         }
     
-        &__title {
+        &__title-text {
             font-size: rem(36px);
         }
 
@@ -198,6 +262,15 @@
             padding: 10px;
         }
 
+        &__button-content {
+            font-size: rem(14px);
+        }
+
+        &__button-text {
+            margin-top: 20px;
+            margin-bottom: 15px;
+        }
+
     
         &__title {
             padding-bottom: 20px;
@@ -207,6 +280,22 @@
         &__container {
             padding-top: 60px;
             padding-bottom: 65px;
+        }
+    }
+}
+
+@media(max-width: 425px) {
+    .artists {
+        &__title-text {
+            font-size: rem(28px);
+        }
+
+        &__button-text {
+
+        }
+
+        &__button-content {
+            font-size: rem(12px);
         }
     }
 }
