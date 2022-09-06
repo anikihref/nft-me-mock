@@ -1206,6 +1206,17 @@ ol {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.footer-navbar .navbar__socials-link:hover {
+  border-color: #D400B3;
+  background-color: rgba(212, 0, 180, 0.1568627451);
+  -webkit-transform: scale(105%);
+      -ms-transform: scale(105%);
+          transform: scale(105%);
 }
 
 .footer__list {
