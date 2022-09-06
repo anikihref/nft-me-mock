@@ -841,8 +841,8 @@ ol {
 }
 
 .header__watch-btn.scrolled {
-  -webkit-animation: watch-btn-border-appear 2500ms forwards 1400ms;
-          animation: watch-btn-border-appear 2500ms forwards 1400ms;
+  -webkit-animation: blink 2500ms forwards 1400ms;
+          animation: blink 2500ms forwards 1400ms;
 }
 
 .header__watch-btn.out {
@@ -1168,148 +1168,6 @@ ol {
     border-top-color: #D400B3;
     border-right-color: #650e58;
     border-bottom-color: #650e58;
-  }
-}
-
-@-webkit-keyframes watch-btn-border-out {
-  0% {
-    border-bottom-color: #650e58;
-    border-top-color: #D400B3;
-    border-left-color: #D400B3;
-    border-right-color: #650e58;
-  }
-
-  25% {
-    border-bottom-color: #650e58;
-    border-left-color: #D400B3;
-    border-right-color: #650e58;
-  }
-
-  50% {
-    border-left-color: #650e58;
-    border-bottom-color: #650e58;
-  }
-
-  75% {
-    border-left-color: #650e58;
-  }
-
-  100% {
-    border-color: transparent;
-  }
-}
-
-@keyframes watch-btn-border-out {
-  0% {
-    border-bottom-color: #650e58;
-    border-top-color: #D400B3;
-    border-left-color: #D400B3;
-    border-right-color: #650e58;
-  }
-
-  25% {
-    border-bottom-color: #650e58;
-    border-left-color: #D400B3;
-    border-right-color: #650e58;
-  }
-
-  50% {
-    border-left-color: #650e58;
-    border-bottom-color: #650e58;
-  }
-
-  75% {
-    border-left-color: #650e58;
-  }
-
-  100% {
-    border-color: transparent;
-  }
-}
-
-@-webkit-keyframes watch-btn-border-appear {
-  14% {
-    border-top-color: #D400B3;
-  }
-
-  28% {
-    border-top-color: #D400B3;
-    border-right-color: #650e58;
-  }
-
-  42% {
-    border-bottom-color: #650e58;
-    border-top-color: #D400B3;
-    border-right-color: #650e58;
-  }
-
-  50% {
-    border-left-color: #D400B3;
-    border-top-color: #D400B3;
-    border-right-color: #650e58;
-    border-bottom-color: #650e58;
-  }
-
-  64% {
-    border-bottom-color: #650e58;
-    border-left-color: #D400B3;
-    border-right-color: #650e58;
-  }
-
-  78% {
-    border-left-color: #650e58;
-    border-bottom-color: #650e58;
-  }
-
-  92% {
-    border-left-color: #650e58;
-  }
-
-  100% {
-    border-color: transparent;
-  }
-}
-
-@keyframes watch-btn-border-appear {
-  14% {
-    border-top-color: #D400B3;
-  }
-
-  28% {
-    border-top-color: #D400B3;
-    border-right-color: #650e58;
-  }
-
-  42% {
-    border-bottom-color: #650e58;
-    border-top-color: #D400B3;
-    border-right-color: #650e58;
-  }
-
-  50% {
-    border-left-color: #D400B3;
-    border-top-color: #D400B3;
-    border-right-color: #650e58;
-    border-bottom-color: #650e58;
-  }
-
-  64% {
-    border-bottom-color: #650e58;
-    border-left-color: #D400B3;
-    border-right-color: #650e58;
-  }
-
-  78% {
-    border-left-color: #650e58;
-    border-bottom-color: #650e58;
-  }
-
-  92% {
-    border-left-color: #650e58;
-  }
-
-  100% {
-    border-color: transparent;
   }
 }
 
@@ -2651,16 +2509,16 @@ ol {
     display: none;
   }
 
-  .header-navbar .navbar__burger-btn {
+  .header__navbar .navbar__burger-btn {
     display: block;
   }
 
-  .header-navbar .navbar__nav,
-  .header-navbar .navbar__button {
+  .header__navbar .navbar__nav,
+  .header__navbar .navbar__button {
     display: none;
   }
 
-  .header-navbar .navbar__navlink {
+  .header__navbar .navbar__navlink {
     font-size: 1rem;
   }
 
@@ -2947,7 +2805,10 @@ ol {
   }
 
   .trending__button-item {
-    margin-left: 0;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .artists__header {
