@@ -14,6 +14,7 @@
   font-family: "PaytoneOne";
 }
 
+.input-section__title,
 .backed__title,
 .artists__title-text,
 .trending__title,
@@ -28,6 +29,7 @@
   transition: 0.8s all ease-in-out;
 }
 
+.input-section__text,
 .backed__text,
 .artists__button-content,
 .trending__text,
@@ -363,6 +365,7 @@ ol {
   font-family: "PaytoneOne";
 }
 
+.input-section__title,
 .backed__title,
 .artists__title-text,
 .trending__title,
@@ -377,6 +380,7 @@ ol {
   transition: 0.8s all ease-in-out;
 }
 
+.input-section__text,
 .backed__text,
 .artists__button-content,
 .trending__text,
@@ -2216,6 +2220,16 @@ ol {
 .input-section__title {
   font-size: 3.25rem;
   line-height: 120%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.input-section__title.scrolled {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
 }
 
 .input-section__text {
@@ -2227,6 +2241,16 @@ ol {
   margin-top: 18px;
   margin-bottom: 35px;
   color: #E5E5E5;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.input-section__text.scrolled {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
 }
 
 .input-section__form {
@@ -2239,6 +2263,19 @@ ol {
       -ms-flex-pack: center;
           justify-content: center;
   height: 50px;
+  border: 4px solid transparent;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  -webkit-transition: all 1s 0.5s;
+  -o-transition: all 1s 0.5s;
+  transition: all 1s 0.5s;
+  padding: 15px;
+}
+
+.input-section__form.scrolled {
+  -webkit-animation: blink 1500ms 500ms forwards;
+          animation: blink 1500ms 500ms forwards;
+  padding: 5px;
 }
 
 .input-section__input {
