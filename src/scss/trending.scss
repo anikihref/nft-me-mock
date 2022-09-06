@@ -139,6 +139,13 @@
         margin-left: auto;
         width: fit-content;
         height: fit-content;
+        opacity: 0;
+        transform: translate(80%);
+        transition: .6s all ease-in-out .3s;
+        &.scrolled {
+            opacity: 1;
+            transform: none;
+        }
     }
 
     &__button {

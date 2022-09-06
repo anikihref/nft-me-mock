@@ -1720,6 +1720,20 @@ ol {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  opacity: 0;
+  -webkit-transform: translate(80%);
+      -ms-transform: translate(80%);
+          transform: translate(80%);
+  -webkit-transition: 0.6s all ease-in-out 0.3s;
+  -o-transition: 0.6s all ease-in-out 0.3s;
+  transition: 0.6s all ease-in-out 0.3s;
+}
+
+.trending__button-item.scrolled {
+  opacity: 1;
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
 }
 
 .trending__button {
@@ -1778,6 +1792,20 @@ ol {
   margin-bottom: 25px;
   color: #D400B3;
   font-family: "PaytoneOne";
+  opacity: 0;
+  -webkit-transform: translate(-80%);
+      -ms-transform: translate(-80%);
+          transform: translate(-80%);
+  -webkit-transition: 0.6s all ease-in-out 0.3s;
+  -o-transition: 0.6s all ease-in-out 0.3s;
+  transition: 0.6s all ease-in-out 0.3s;
+}
+
+.artists__button-text.scrolled {
+  opacity: 1;
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
 }
 
 .artists__button-content {
