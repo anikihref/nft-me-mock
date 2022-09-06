@@ -14,6 +14,7 @@
   font-family: "PaytoneOne";
 }
 
+.backed__title,
 .artists__title-text,
 .trending__title,
 .nft-steps__title,
@@ -27,6 +28,7 @@
   transition: 0.8s all ease-in-out;
 }
 
+.backed__text,
 .artists__button-content,
 .trending__text,
 .statistics__text,
@@ -361,6 +363,7 @@ ol {
   font-family: "PaytoneOne";
 }
 
+.backed__title,
 .artists__title-text,
 .trending__title,
 .nft-steps__title,
@@ -374,6 +377,7 @@ ol {
   transition: 0.8s all ease-in-out;
 }
 
+.backed__text,
 .artists__button-content,
 .trending__text,
 .statistics__text,
@@ -2071,6 +2075,16 @@ ol {
   line-height: 120%;
   font-family: "PaytoneOne";
   margin-bottom: 18px;
+  -webkit-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
+}
+
+.backed__title.scrolled {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
 }
 
 .backed__text {
@@ -2080,6 +2094,16 @@ ol {
   line-height: 160%;
   color: #E5E5E5;
   max-width: 600px;
+  -webkit-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
+}
+
+.backed__text.scrolled {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
 }
 
 .backed__main {
@@ -2110,6 +2134,20 @@ ol {
           align-items: center;
   padding: 10% 25%;
   border: 1px solid #858586;
+  -webkit-transition: 1000ms all ease-in-out 500ms;
+  -o-transition: 1000ms all ease-in-out 500ms;
+  transition: 1000ms all ease-in-out 500ms;
+  opacity: 0;
+  -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+          transform: translateY(100%);
+}
+
+.backed__item.scrolled {
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+  opacity: 1;
 }
 
 .backed__item-img {
@@ -2128,10 +2166,18 @@ ol {
   position: absolute;
   top: 50%;
   left: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, 100%);
+      -ms-transform: translate(-50%, 100%);
+          transform: translate(-50%, 100%);
+  padding: 5% 12%;
+}
+
+.backed__item5.scrolled {
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  padding: 5% 12%;
+  opacity: 1;
 }
 
 .backed__item2,
