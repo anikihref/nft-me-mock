@@ -1,39 +1,23 @@
-const items = [...document.querySelectorAll('.anim-item')];
+const items = [...document.querySelectorAll('[data-anim-item]')];
 
-function getOffset(el) {
-  const rect = el.getBoundingClientRect();
-  const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
-  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+const animItemsObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    const once = Boolean(entry.target.dataset.animItem);
 
-  return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
-}
-
-function animateOnScroll() {
-  items.forEach((item) => {
-    const itemHeight = item.offsetHeight;
-    const itemOffset = getOffset(item).top;
-    const animationStart = 4;
-
-    let itemPoint = window.innerHeight - itemHeight / animationStart;
-
-    if (itemHeight > window.innerHeight) {
-      itemPoint = window.innerHeight - window.innerHeight / animationStart;
+    if (entry.isIntersecting) {
+      return entry.target.classList.add('scrolled');
+    }
+    if (!once) {
+      return entry.target.classList.remove('scrolled');
     }
 
-    if (
-      window.scrollY > itemOffset - itemPoint && window.scrollY < itemOffset + itemHeight
-    ) {
-      item.classList.add('scrolled');
-    } else if (!item.classList.contains('anim-once')) {
-      item.classList.remove('scrolled');
-    }
+    return undefined;
   });
-}
+});
 
-if (items.length > 0) {
-  window.addEventListener('scroll', animateOnScroll);
-  animateOnScroll();
-}
+items.forEach((item) => {
+  animItemsObserver.observe(item);
+});
 
 function animateStatisticsDigits() {
   function digitsCountersAnimate(digitsCounter) {
@@ -95,4 +79,5 @@ function animateStatisticsDigits() {
     });
   }
 }
+
 window.addEventListener('load', animateStatisticsDigits);
