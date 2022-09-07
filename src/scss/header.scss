@@ -439,3 +439,31 @@
     border-bottom-color: #650e58;
   }
 }
+
+@keyframes watch-btn-border-out {
+  0% {
+    border-left-color: $pink;
+    border-top-color: $pink;
+    border-right-color: #650e58;
+    border-bottom-color: #650e58;
+  }
+
+  25% {
+    border-bottom-color: #650e58;
+    border-left-color: $pink;
+    border-right-color: #650e58;
+  }
+
+  50% {
+    border-left-color: $pink;
+    border-bottom-color: #650e58;
+  }
+
+  75% {
+    border-left-color: $pink;
+  }
+
+  100% {
+    border-color: transparent;
+  }
+}

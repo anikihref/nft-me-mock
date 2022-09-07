@@ -1171,6 +1171,62 @@ ol {
   }
 }
 
+@-webkit-keyframes watch-btn-border-out {
+  0% {
+    border-left-color: #D400B3;
+    border-top-color: #D400B3;
+    border-right-color: #650e58;
+    border-bottom-color: #650e58;
+  }
+
+  25% {
+    border-bottom-color: #650e58;
+    border-left-color: #D400B3;
+    border-right-color: #650e58;
+  }
+
+  50% {
+    border-left-color: #D400B3;
+    border-bottom-color: #650e58;
+  }
+
+  75% {
+    border-left-color: #D400B3;
+  }
+
+  100% {
+    border-color: transparent;
+  }
+}
+
+@keyframes watch-btn-border-out {
+  0% {
+    border-left-color: #D400B3;
+    border-top-color: #D400B3;
+    border-right-color: #650e58;
+    border-bottom-color: #650e58;
+  }
+
+  25% {
+    border-bottom-color: #650e58;
+    border-left-color: #D400B3;
+    border-right-color: #650e58;
+  }
+
+  50% {
+    border-left-color: #D400B3;
+    border-bottom-color: #650e58;
+  }
+
+  75% {
+    border-left-color: #D400B3;
+  }
+
+  100% {
+    border-color: transparent;
+  }
+}
+
 .footer-navbar {
   position: static;
 }
@@ -1214,9 +1270,6 @@ ol {
 .footer-navbar .navbar__socials-link:hover {
   border-color: #D400B3;
   background-color: rgba(212, 0, 180, 0.1568627451);
-  -webkit-transform: scale(105%);
-      -ms-transform: scale(105%);
-          transform: scale(105%);
 }
 
 .footer__list {
