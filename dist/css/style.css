@@ -1376,9 +1376,9 @@ ol {
 }
 
 .samples__item:nth-child(1n+4) {
-  -webkit-transform: translate(-200%, 0%);
-      -ms-transform: translate(-200%, 0%);
-          transform: translate(-200%, 0%);
+  -webkit-transform: translate(-100%, 0%);
+      -ms-transform: translate(-100%, 0%);
+          transform: translate(-100%, 0%);
 }
 
 .samples__item:nth-child(1n+4).scrolled {
@@ -1391,9 +1391,9 @@ ol {
 .samples__item:nth-child(1),
 .samples__item:nth-child(2),
 .samples__item:nth-child(3) {
-  -webkit-transform: translate(200%, 0%);
-      -ms-transform: translate(200%, 0%);
-          transform: translate(200%, 0%);
+  -webkit-transform: translate(100%, 0%);
+      -ms-transform: translate(100%, 0%);
+          transform: translate(100%, 0%);
 }
 
 .samples__item:nth-child(1).scrolled,

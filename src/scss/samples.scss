@@ -58,7 +58,7 @@
     }
 
     &:nth-child(1n + 4) {
-      transform: translate(-200%, 0%);
+      transform: translate(-100%, 0%);
       &.scrolled {
         transform: translate(25px, 0%);
         opacity: 1;
@@ -68,7 +68,7 @@
     &:nth-child(1),
     &:nth-child(2),
     &:nth-child(3) {
-      transform: translate(200%, 0%);
+      transform: translate(100%, 0%);
       &.scrolled {
         transform: translate(-40px, 0%);
         opacity: 1;
