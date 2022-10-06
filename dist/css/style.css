@@ -1067,8 +1067,6 @@ ol {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 100px;
-  padding-bottom: 50px;
 }
 
 .burger.active {
@@ -1102,6 +1100,7 @@ ol {
 .burger__button {
   padding: 15px 0;
   width: 300px;
+  margin-bottom: 40px;
 }
 
 .burger__close-btn {
@@ -2964,11 +2963,6 @@ ol {
 
   .header__watch-btn {
     border-width: 2px;
-  }
-
-  .burger {
-    padding-top: 50px;
-    padding-bottom: 30px;
   }
 
   .burger__navlink {
